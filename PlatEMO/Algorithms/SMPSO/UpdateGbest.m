@@ -10,7 +10,8 @@ function [Gbest,CrowdDis] = UpdateGbest(Gbest,N)
 % Computational Intelligence Magazine, 2017, 12(4): 73-87".
 %--------------------------------------------------------------------------
 
-    Gbest    = Gbest(NDSort(Gbest.objs,1)==1);
+%    Gbest    = Gbest(NDSort(Gbest.objs,1)==1);
+    Gbest    = Gbest(NDSort_CDAS(Gbest.objs,1)==1);
     CrowdDis = CrowdingDistance(Gbest.objs);
     [~,rank] = sort(CrowdDis,'descend');
     Gbest    = Gbest(rank(1:min(N,length(Gbest))));
