@@ -1,4 +1,9 @@
 function [FrontNo,MaxFNo] = NDSort(varargin)
+
+% My understanding: the archive = the first non-dominated front (NDSort does non-dominated sort on a set of individuals - resulting in different non-dominated front layers). That is, the max size of the
+% arhive will be the same as the population size. See NDSort.m for more
+% info.
+
 %NDSort - Do non-dominated sorting by efficient non-dominated sort.
 %
 %   FrontNo = NDSort(F,s) does non-dominated sorting on F, where F is the
