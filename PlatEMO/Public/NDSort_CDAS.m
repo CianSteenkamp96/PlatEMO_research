@@ -1,5 +1,9 @@
 function [FrontNo,MaxFNo] = NDSort_CDAS(PopObj,nSort)
 
+% My understanding: the archive = the first non-dominated front (NDSort does non-dominated sort on a set of individuals - resulting in different non-dominated front layers). That is, the max size of the
+% arhive will be the same as the population size. See NDSort.m for more
+% info.
+
 % Copyright 2016-2017 Ye Tian
 
     [N,M] = size(PopObj);
