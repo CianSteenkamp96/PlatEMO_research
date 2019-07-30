@@ -29,7 +29,13 @@ classdef WFG3 < PROBLEM
                 obj.Global.D = obj.Global.M + 9;
             end
             obj.K = obj.Global.ParameterSet(obj.Global.M-1);
-            obj.Global.D        = ceil((obj.Global.D-obj.Global.M+1)/2)*2 + obj.Global.M - 1;
+            % I got an error for M = 8 with k = 14 and M = 10 with k = 18.
+            % Had to set k = 21 for M = 8 and k = 9 for M = 10 to avoid the error.
+            % Also D was set to 1 more than specified if D was an even number; that is, specifying D = 30 turned out to be D = 31 in the result display.
+            % Note: at all times k equals a multiple of (M - 1) as required/allowed.
+            % Commenting out this line below resolves the 2 issues above (k-issue and D-issue).
+            % Note: L = D - k and L must be divisible by 2 for WFG2 and WFG3 which is still the case for D = 30, 100, 500, or 1000 with k = 2 * (M - 1).
+            %obj.Global.D        = ceil((obj.Global.D-obj.Global.M+1)/2)*2 + obj.Global.M - 1;
             obj.Global.lower    = zeros(1,obj.Global.D);
             obj.Global.upper    = 2 : 2 : 2*obj.Global.D;
             obj.Global.encoding = 'real';
