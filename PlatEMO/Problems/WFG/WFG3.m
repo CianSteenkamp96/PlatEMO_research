@@ -38,7 +38,7 @@ classdef WFG3 < PROBLEM
             %obj.Global.D        = ceil((obj.Global.D-obj.Global.M+1)/2)*2 + obj.Global.M - 1;
             % After emailing Ye Tian he confirmed the above line is wrong
             % and should be the following:
-            obj.Global.D=ceil((obj.Global.D-obj.K)/2)*2+obj.K
+            obj.Global.D        = ceil((obj.Global.D-obj.K)/2)*2+obj.K;
             obj.Global.lower    = zeros(1,obj.Global.D);
             obj.Global.upper    = 2 : 2 : 2*obj.Global.D;
             obj.Global.encoding = 'real';
