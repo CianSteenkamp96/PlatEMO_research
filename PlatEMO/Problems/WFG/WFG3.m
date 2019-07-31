@@ -36,6 +36,9 @@ classdef WFG3 < PROBLEM
             % Commenting out this line below resolves the 2 issues above (k-issue and D-issue).
             % Note: L = D - k and L must be divisible by 2 for WFG2 and WFG3 which is still the case for D = 30, 100, 500, or 1000 with k = 2 * (M - 1).
             %obj.Global.D        = ceil((obj.Global.D-obj.Global.M+1)/2)*2 + obj.Global.M - 1;
+            % After emailing Ye Tian he confirmed the above line is wrong
+            % and should be the following:
+            obj.Global.D=ceil((obj.Global.D-obj.K)/2)*2+obj.K
             obj.Global.lower    = zeros(1,obj.Global.D);
             obj.Global.upper    = 2 : 2 : 2*obj.Global.D;
             obj.Global.encoding = 'real';
