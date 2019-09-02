@@ -1,4 +1,6 @@
 % Cian Steenkamp
+% This script creates files where each line represents a found solution; columns seperated by spaces (column for each objective).
+% This script formats the 'archived' solutions found during the search.
 % This script will need to be run in each
 % opt_raw_data/algo/instance/problem/objective/file (for KnEA, MOEADD, CDAS_SMPSO) folder
 % and
