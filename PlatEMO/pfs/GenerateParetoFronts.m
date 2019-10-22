@@ -5,7 +5,7 @@
 clear;
 clc;
 
-dimensions = [3; 5; 8; 10; 15;];
+dimensions = [3; 5; 8; 10; 15;]; % #objectives
 paretoPoints = 1500; % not exactly so many points are generated AND it differs for each #obj
 
 % ------------------------------------------------------------------------------------
